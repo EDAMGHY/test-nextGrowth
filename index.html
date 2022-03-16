@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awesome cdnjs -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+      integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- style link -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Test NextGrowth</title>
+  </head>
+  <body>
+    <div class="notification"></div>
+    <!-- Table Component -->
+    <div class="container">
+      <h1>List Utilisateurs</h1>
+      <div class="table">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Date de creation</th>
+              <th>Etat</th>
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>Nom d'utilisateur</th>
+              <th>Matricule</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <h1 class="nodata">Sorry No Data to show!</h1>
+      </div>
+      <div class="btn-container">
+        <button class="btn" id="ajouterModal">Ajouter Utilisateur</button>
+      </div>
+    </div>
+
+    <!-- Modal Component -->
+    <div class="modal">
+      <button class="modal-icon" id="removeModal">
+        <i class="fas fa-times"></i>
+      </button>
+      <h1>Ajout d'utilisateurs</h1>
+      <form>
+        <div class="grid">
+          <div class="form-line">
+            <label for="nom">Nom:</label>
+            <input type="text" placeholder="Entrer Nom..." id="nom" />
+          </div>
+          <div class="form-line">
+            <label for="prenom">Prénom:</label>
+            <input type="text" placeholder="Entrer Prenom..." id="prenom" />
+          </div>
+          <div class="form-line">
+            <label for="etat">Etat:</label>
+            <select name="etat" id="etat">
+              <option value="Validé">Validé</option>
+              <option value="Rejeté">Rejeté</option>
+              <option value="En Validation">En Validation</option>
+            </select>
+          </div>
+          <div class="form-line">
+            <label for="utilisateur">Nom d'utilisateur:</label>
+            <input
+              type="text"
+              placeholder="Entrer Nom d'utilisateur..."
+              id="utilisateur"
+            />
+          </div>
+          <div class="form-line">
+            <label for="date">Date de creation:</label>
+            <input
+              type="date"
+              placeholder="Entrer Date de creation..."
+              id="date"
+            />
+          </div>
+          <div class="form-line">
+            <label for="matricule">Matricule:</label>
+            <input
+              type="text"
+              placeholder="Entrer Matricule..."
+              id="matricule"
+            />
+          </div>
+        </div>
+        <button class="btn" id="btnUtil">Enregister</button>
+      </form>
+    </div>
+    <!-- Scripts  -->
+    <!-- array link must be placed above the script  -->
+    <script src="users.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
